@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    /* คำสั่งนี้กำหนดให้ทุก element ใช้โมเดล box-sizing เป็น border-box 
+    ช่วยให้ง่ายต่อการจัดการขนาดของ element โดยไม่ต้องคำนึงถึงการเพิ่ม padding หรือ border */
+}
+
+html {
+    font-size: 70.5%;
+    /* กำหนดขนาดของ font ในเว็บไซต์ให้มีขนาดเท่ากับ 70.5% ของขนาด font ที่เป็นค่าเริ่มต้น (default font size) ซึ่งส่วนใหญ่มักจะเป็น 16px  */
+    /* -webkit-text-size-adjust: 100%; */
+    /* -ms-text-size-adjust: 100%; */
+    /* font-size-adjust: 100%; */
+    overflow-x: hidden;
+}
+
+/* div,nav {
+    display: block;
+} */
+
+body {
+    color: #222;
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/*ส่วน header (container)ที่เป็น Grid เอาไว้ครอบitem*/
+.panel.wrapper {
+    display: grid;
+    grid-template-columns: minmax(350px, 1fr) 1fr minmax(300px, 1fr);
+    grid-template-rows: auto;
+    column-gap: 8px;
+    padding: 25px 20px;
+    /*บนล่าง ซ้ายขวา*/
+}
+
+/* ส่วนของgrid เอาไว้ครอบส่วนหัว เมื่อหน้าจอมีขนาดเล็กกว่า 769px ลงไปให้มีgridดังนี้*/
+@media (max-width: 769px),
+print {
+    .panel.wrapper {
+        grid-template-columns: 24px 24px 1fr;
+    }
+}
+
+/* เริ่ม header ทางด้านซ้าย มีทั้งหมด4ส่วนรวมham*/
+.header-left-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 10px;
+}
+
+.page-header a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #222;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.more-links-toggle {
+    margin: 0;
+    padding: 0;
+    color: #222;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.more-links-toggle:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.more-links-dropdown {
+    position: relative;
+}
+
+.more-links-options {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f7f7;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    display: none;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.page-header {
+    margin-bottom: 32px;
+}
+
+
+/* ส่วนhamburger bar  */
+.bar-nav {
+    display: none;
+}
+
+.bar-nav svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 3px;
+}
+
+/*ส่วนhamburger bar  */
+@media (max-width: 769px),
+print {
+
+    /* ซ่อนตัวhead left all */
+    .action,
+    .more-links-dropdown {
+        display: none;
+    }
+
+    /* แสดงส่วนham */
+    .bar-nav {
+        display: block !important;
+    }
+}
+
+/* จบheader ทางด้านซ้าย */
+
+/*Logo ตรงกลาง*/
+.logo {
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 76px;
+    height: 50px;
+}
+
+@media (max-width: 769px),
+print {
+    .logo img {
+        width: 36px;
+        height: 20px;
+        margin-left: 20px;
+    }
+   
+
+}
+/* headerทางขวา */
+.header-right-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin-right: 10px;
+    margin-left: auto;
+}
+.right-links {
+    display: flex;
+    align-items: center;
+}
+
+.right-links svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 3px;
+}
+/* หน้าจอน้อยกว่า 1400px */
+@media (max-width: 1400px) {
+    .right-links span {
+        display: none;
+    }
+}

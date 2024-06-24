@@ -1,0 +1,226 @@
+/* navbar */
+.nav-wrapper {
+    padding: 0 32px;
+    margin: 0 auto;
+    position: relative;
+}
+.block-search {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin-right: 15px;
+}
+.block-search label {
+    position: relative;
+}
+.icon-search {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem
+}
+.icon-search svg {
+    width: 20px;
+    height: 20px;
+}
+.box {
+    display: block;
+    background-color: #ffffff;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(35, 33, 33);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2.25rem;
+    padding-right: 0.75rem;
+    outline: none;
+    font-family: "Prompt", sans-serif;
+    color: #242424;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* ให้เรียงต่อกันแนวนอน */
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* ปรับขนาดตัวอักษรของmegamenuที่จะเอาไว้แสดงตอนหน้าจอขนาดเล็ก */
+.megamenulink1 span,
+.megamenulink2 span,
+.megamenulink3 span,
+.megamenulink4 span,
+.megamenulink5 span {
+    font-size: 2rem;
+    text-align: center;
+    display: none;
+    align-items: center;
+    gap: 20%;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+
+/* เมื่อหน้าจอมีขนาดน้อยกว่าหรือเท่ากับ 1024px ให้navขยับมาทางซ้าย */
+@media (max-width: 1024px) {
+    .nav {
+        justify-content: start;
+    }
+}
+
+/* ปรับฟ้อนต์ของตัว list */
+.listlevel1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    padding-bottom: 3px;
+}
+
+/*ซ่อนตัวลูกศรไว้ก่อน ไว้ใช้แสดงผลตอนหน้าจอเล็ก  */
+.nav-list svg {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+/* จัดเนื้อหาเมนูให้เรียงต่อกันตามแนวคอลัม */
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+}
+
+/* ปรับขนาดตัวอักษรของเมนุย่อย */
+.megamenu__item {
+    font-size: 1.3rem;
+    list-style: none;
+}
+
+/* กำหนดขนาดหัวข้อของเมนูหลัก */
+.header__megamenu {
+    font-weight: 600;
+    font-size: 1.5rem;
+    list-style: none;
+}
+.megamenu__item1,
+.megamenu__item2,
+.megamenu__item3,
+.megamenu__item4,
+.megamenu__item5 {
+    margin-top: 2.5rem;
+}
+/* กำหนดของกล่องครอบหมวดหมู่ */
+.megamenulink1,
+.megamenulink2,
+.megamenulink3,
+.megamenulink4,
+.megamenulink5 {
+    position: absolute;
+    width: 100%;
+    top: 20;
+    left: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #222;
+    z-index: -3;
+    transition: all .2s ease; /* เพิ่มเอฟเฟกต์การเคลื่อนไหวทั้งหมด */
+    transform: translateY(20px); /* เลื่อนลงบ้างเมื่อปิด */
+    opacity: 0; /* ซ่อนอย่างเริ่ด */
+}
+
+#nav__link1:hover .megamenulink1,
+#nav__link2:hover .megamenulink2,
+#nav__link3:hover .megamenulink3,
+#nav__link4:hover .megamenulink4,
+#nav__link5:hover .megamenulink5 {
+    transform: translateY(0); /* ย้ายกลับไปที่ตำแหน่งเริ่มต้น */
+    opacity: 1; /* แสดงออกมาอย่างชัดเจน */
+    z-index: 10;
+
+}
+
+
+
+/* เมื่อหน้าจอมีขนาดน้อยกว่าหรือเท่ากับ 769px */
+@media only screen and (max-width: 769px) {
+
+    #nav__link1:hover .megamenulink1,
+    #nav__link2:hover .megamenulink2,
+    #nav__link3:hover .megamenulink3,
+    #nav__link4:hover .megamenulink4,
+    #nav__link5:hover .megamenulink5 {
+        display: none;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .block-search {
+        display: none;
+    }
+
+    .nav-list-active {
+        display: flex;
+        flex-direction: column;
+        transition: left 0.3s;
+        opacity: 1;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: fixed;
+        width: calc(100% - 80px);
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        padding-left: 20px;
+        padding-top: 50px;
+        /* border-right: 1px solid black; */
+        box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+        margin-top: 0;
+    }
+
+    .listlevel1 a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-list svg {
+        display: block;
+        margin-right: 25px;
+    }
+
+    .megamenulink1-active span,
+    .megamenulink2-active span,
+    .megamenulink3-active span,
+    .megamenulink4-active span,
+    .megamenulink5-active span {
+        display: flex;
+      
+    }
+
+    /* goto */
+    .megamenulink1-active,
+    .megamenulink2-active,
+    .megamenulink3-active,
+    .megamenulink4-active,
+    .megamenulink5-active {
+        display: block !important;
+        width: 100%;
+        height: 95%;
+        padding-left: 20px;
+        overflow-y: auto;
+        top: 0;
+        right: 0;
+        border-bottom: none;
+    }
+}

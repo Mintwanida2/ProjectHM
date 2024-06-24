@@ -1,0 +1,417 @@
+/* main content */
+.main-content {
+    width: 100%;
+    height: auto;
+}
+
+/*promotion หน้าหลัก  */
+.promotion-wrap {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.promo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 180px;
+    font-size: 1.2rem;
+    color: rgb(33, 33, 33);
+}
+
+/* หน้าจอน้อยกว่า */
+@media screen and (max-width: 768px) {
+
+    .pro1,
+    .pro3 {
+        display: none;
+    }
+
+    .pro2 {
+        text-align: center;
+    }
+
+    .promotion-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 5px auto;
+
+
+
+    }
+
+}
+
+
+/* แบนเนอร์ */
+.see-banner {
+    position: relative;
+    width: 100%;
+    padding: 0 4%;
+    height: auto;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 2%;
+}
+
+.banner-item img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.banner-text {
+    background-color: rgba(29, 27, 27, 0.863);
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+
+}
+
+.banner-btn {
+    background-color: #fff;
+    text-align: center;
+    padding: 5px 30px;
+    position: absolute;
+    bottom: 5%;
+    right: 45%;
+}
+
+.banner-btn {
+    text-decoration: none;
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+}
+
+.text1 {
+    left: 20%;
+    top: 20%;
+    padding: 12px;
+    width: 30%;
+}
+
+.text2 {
+    text-align: center;
+    left: 19%;
+    top: 50%;
+    padding: 12px;
+    width: 20%;
+}
+
+.text3 {
+    text-align: start;
+    left: 15%;
+    top: 25%;
+    padding: 12px;
+    width: 30%;
+}
+
+.banner-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 13px;
+    border-color: transparent transparent transparent rgba(29, 27, 27, 0.863);
+
+}
+
+
+/* slide Trending */
+.title {
+    font-weight: 400;
+    text-align: center;
+}
+
+.wrapper-trend {
+    position: relative;
+    padding: 0 4%;
+    width: 100%;
+    height: auto;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-trend svg {
+    cursor: pointer;
+}
+
+.slide-wrapper {
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+
+}
+
+.slide-wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+.card-wrap {
+    display: inline-block;
+    margin-right: 56px;
+    width: 150px;
+}
+
+.card-wrap a {
+    text-decoration: none;
+}
+
+.card,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.content-cat {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.card-image .card-img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .banner-btn{
+        display: none;
+    }
+    .wrapper-trend svg {
+        display: none;
+    }
+
+    .card-wrap {
+        display: inline-block;
+        margin-right: 20px;
+        width: 80px;
+    }
+
+    .content-cat {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .content-name {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+}
+
+
+
+/* สไลด์ Make shopping easy! */
+.container {
+    position: relative;
+    padding: 0 4%;
+    width: 80%;
+    height: auto;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.top {
+    display: flex;
+    align-items: center;
+
+}
+
+.frame {
+    height: auto;
+    /* ความสูงจะถูกปรับให้สัมพันธ์กับความกว้าง */
+    max-width: 90%;
+    /* ความกว้างสูงสุดคือ 90% ของพอร์ต */
+    width: auto;
+    /* ความกว้างเต็มรูปแบบ */
+    overflow: hidden;
+    /* ซ่อนส่วนที่เกินขอบเขตขององค์ประกอบ */
+}
+
+.slider {
+    display: flex;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* dot */
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    font: inherit;
+    width: 8px;
+    height: 8px;
+    background-color: #ffff;
+    border: 0.5px solid #222;
+    margin: 4px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.indicator.active {
+    background-color: #e50010;
+    border-color: #e50010;
+}
+
+
+/* footer */
+footer {
+    background-color: #e4e4e4;
+    padding-bottom: 56px;
+    padding: 30px
+}
+
+.content-footer {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.content-footer a {
+    line-height: 2rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.content-footer h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-option {
+    list-style: none;
+    padding: 0;
+}
+
+.nowrap-link {
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.rejisters {
+    display: flex;
+    align-items: center;
+}
+
+/* bottom */
+.footer-icon {
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    margin-right: 0px;
+    padding: 0;
+
+}
+
+.bottom-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 46px;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.copyright {
+    box-sizing: border-box;
+    display: block;
+    padding: 9px;
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 675px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.arrow-icon {
+    display: none;
+    color: #222;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .copyright {
+        font-size: 1rem;
+    }
+
+    .footer-dropdown {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-option {
+        line-height: 36px;
+    }
+
+    .arrow-icon {
+        display: block;
+    }
+
+    .arrow-icon.rotated {
+        transform: rotate(180deg);
+    }
+
+    .content-footer {
+        display: block;
+    }
+
+    .footer-option {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease-out;
+    }
+
+    .footer-option.show {
+        max-height: 1000px;
+        transition: max-height .3s ease-in;
+    }
+
+}

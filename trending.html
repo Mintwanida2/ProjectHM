@@ -1,0 +1,1559 @@
+<!DOCTYPE html> <!-- เป็นการระบุเวอร์ชันของ HTML ที่ใช้ ในที่นี้คือ HTML5 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trending now!!!!</title>
+    <link rel="icon" href="https://th.hm.com/static/version1709827718/frontend/GillCapital/hmth/th_TH/images/logo.svg">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/content_trending.css">
+
+    <!-- js -->
+    <script src="js/onclick.js"></script>
+    <!-- tailwind -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="page-header">
+            <div class="panel wrapper">
+                <div class="header-left-links">
+                    <a class="action" href="#">
+                        <span>ฝ่ายบริการลูกค้า</span>
+                    </a>
+                    <a class="action" href="#">
+                        <span>ตำแหน่งที่ตั้งร้าน</span>
+                    </a>
+                    <div class="more-links-dropdown">
+                        <button class="more-links-toggle" onclick="morelink()">
+                            <span><i class="bi bi-three-dots"></i></span>
+                        </button>
+                        <ul class="more-links-options">
+                            <li>
+                                <a class="link" href="#">ดาวน์โหลดระบบ Android</a>
+                            </li>
+                            <li>
+                                <a class="link" href="#">ดาวน์โหลดระบบ iOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bar-nav" onclick="toggleham(this)"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg></div>
+
+                </div>
+                <a href="#" class="logo">
+                    <img src="https://th.hm.com/static/version1709827718/frontend/GillCapital/hmth/th_TH/images/logo.svg"
+                        alt="HM logo" width="76" height="50"></a>
+                <div class="header-right-links ">
+                    <a class="right-links" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                        <span class="">ลงชื่อเข้าใช้</span>
+                    </a>
+                    <a href="#" class="right-links1 ">
+                        <span class="">Thai</span>
+                    </a>
+                    <a href="#" class="right-links">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                        </svg>
+                        <span class="">รายการโปรด</span>
+                    </a>
+                    <a href="#" class="right-links">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                            stroke="currentColor" class="">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <span class="">กระเป๋าช้อปปิ้ง</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav class="nav">
+                    <ul class="nav-list" id="navmenu">
+                        <li id="nav__link1" class="listlevel1" onclick="goto(this)"><a href="#">ผู้หญิง<svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-arrow-right-short  cursor-pointer" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                </svg></a>
+                            <div class="megamenulink1" id="megamenulinkgirl">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor"
+                                        class="bi bi-arrow-left-short cursor-pointer" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                                    </svg>ผู้หญิง
+                                </span>
+                                <ul class="content">
+                                    <li class="megamenu__item1 header__megamenu">สินค้าใหม่</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อผ้า</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดว่ายน้ำ</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">รองเท้า กระเป๋า และเครื่องประดับ</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดชั้นใน & ชุดนอน</a>
+                                        </div>
+                                    </li>
+                                    <!-- end สินค้าใหม่ -->
+                                    <li class="megamenu__item2 header__megamenu">Trending Now</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Classics reimagined</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Always summer</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ไอเทมรับซีซันใหม่</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Online Exclusive Items</a>
+
+                                        </div>
+                                    </li>
+                                    <!-- end Trending Now -->
+                                    <li class="megamenu__item3 header__megamenu">Deals & Offers</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าชิ้นสุดท้าย</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าราคาสุดคุ้มค่า เริ่มต้น ฿179</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item4 header__megamenu">ช้อปคอลเลคชั่น
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">S/S 2024</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Limited Edition 2024</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">STUDIO S/S 2024</a>
+
+                                        </div>
+                                    </li>
+                                    <!-- end ช้อปคอลเลคชั่น -->
+                                </ul>
+                                <!-- เริ่มคอลัมที่2 ของผู้หญิง -->
+                                <ul class="content">
+                                    <li class="megamenu__item4 header__megamenu">ช้อปตามประเภทสินค้า</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เดรส</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อ</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อเชิ้ต & เบลาส์</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">กระโปรง</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดว่ายน้ำ</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">กางเกง</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">คาร์ดิแกน & เสื้อกันหนาว</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">กางเกงยีนส์</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อไหมพรม</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เบลเซอร์ & เสื้อกั๊ก</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อเชิ้ต & เบลาส์</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">แจ็คเก็ต & เสื้อโค้ท</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดชั้นใน</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดนอน - สินค้าเฉพาะออนไลน์</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ถุงเท้า & ถุงน่อง</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </li>
+                        <li id="nav__link2" class="listlevel1" onclick="goto(this)"><a href="#">ผู้ชาย<svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-arrow-right-short  cursor-pointer" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                </svg></a>
+                            <div class="megamenulink2" id="megamenulinkboy">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor"
+                                        class="bi bi-arrow-left-short cursor-pointer" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                                    </svg>ผู้ชาย
+                                </span>
+                                <ul class="content">
+                                    <li class="megamenu__item1 header__megamenu">สินค้าใหม่</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อผ้า</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">รองเท้า กระเป๋า และเครื่องประดับ</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อยืด & เสื้อกล้าม</a>
+
+                                        </div>
+                                    </li>
+                                    <!-- end สินค้าใหม่ -->
+
+                                    <li class="megamenu__item2 header__megamenu">Trending Now</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Seasonal trending</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Music, Movies, & Logos</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Online Exclusive Items</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าแพ็กหลายชิ้น</a>
+
+                                        </div>
+                                    </li>
+                                    <!-- end Trending Now -->
+
+                                    <li class="megamenu__item3 header__megamenu">Deals & Offers</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าชิ้นสุดท้าย</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าราคาสุดคุ้มค่า เริ่มต้น ฿179</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item4 header__megamenu">ช้อปคอลเลคชั่น
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">S/S 2024</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">H2 Collection</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ไอเทมผ้าลินิน</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">The denim roundup</a>
+
+                                        </div>
+                                    </li>
+                                    <!-- end ช้อปคอลเลคชั่น -->
+                                </ul>
+                                <!-- เริ่มคอลัมที่2 ของผู้หญิง -->
+                                <ul class="content">
+                                    <li class="megamenu__item4 header__megamenu">ช้อปตามประเภทสินค้า</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อยืด & เสื้อกล้าม</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อฮู้ด & เสื้อยืดแขนยาว</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">กางเกง</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อเชิ้ต</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เบสิค</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">กางเกงขาสั้น</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">กางเกงยีนส์</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">คาร์ดิแกน & เสื้อกันหนาว</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">แจ็คเก็ต & เสื้อโค้ท</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เบลเซอร์ & สูท</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Swimwear</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดชั้นใน</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">แอ็กเซสซอรี่</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">รองเท้า</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าพรีเมี่ยม</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Care Products</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="nav__link3" class="listlevel1" onclick="goto(this)"><a href="#">เด็กอ่อน<svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-arrow-right-short  cursor-pointer" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                </svg></a>
+                            <div class="megamenulink3" id="megamenulinkbaby">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor"
+                                        class="bi bi-arrow-left-short cursor-pointer" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                                    </svg>เด็กอ่อน
+                                </span>
+                                <ul class="content">
+                                    <li class="megamenu__item1 header__megamenu">สินค้าใหม่</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อผ้า</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">รองเท้า กระเป๋า และเครื่องประดับ</a>
+                                        </div>
+                                    </li>
+                                    <!-- end สินค้าใหม่ -->
+                                    <li class="megamenu__item2 header__megamenu">Popular Now</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ไอเทมสดใสรับซัมเมอร์ เริ่มต้น ฿179</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ไอเทมที่ต้องมีประจำซีซัน เริ่มต้น ฿179</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Cartoon Besties</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Online Exclusive Items</a>
+
+                                        </div>
+                                    </li>
+                                    <!-- end Popular Now -->
+                                    <li class="megamenu__item3 header__megamenu">Deals & Offers</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าชิ้นสุดท้าย</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าราคาสุดคุ้มค่า เริ่มต้น ฿179</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item4 header__megamenu">Campaigns</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Sophie la girafe x H&M</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">แฟชั่นลายดอกไม้​</a>
+
+                                        </div>
+                                    </li>
+                                    <!-- end ช้อปคอลเลคชั่น -->
+                                </ul>
+                                <!-- เริ่มคอลัมที่2 ของเด็กอ่อน -->
+                                <ul class="content">
+                                    <li class="megamenu__item4 header__megamenu">ช้อปตามประเภทสินค้า</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เด็กแรกเกิด</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เด็กผู้หญิง</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เด็กผู้ชาย</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">กระโปรง</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เบสิค & สินค้าแพ็กหลายชิ้น</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Care Products</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="nav__link4" class="listlevel1" onclick="goto(this)"><a href="#">เด็ก<svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-arrow-right-short  cursor-pointer" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                </svg></a>
+                            <div class="megamenulink4" id="megamenulinkchild">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor"
+                                        class="bi bi-arrow-left-short cursor-pointer" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                                    </svg>เด็ก
+                                </span>
+                                <ul class="content">
+                                    <li class="megamenu__item1 header__megamenu">สินค้าใหม่</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อผ้า</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">รองเท้า กระเป๋า และเครื่องประดับ</a>
+                                        </div>
+                                    </li>
+                                    <!-- end สินค้าใหม่ -->
+                                    <li class="megamenu__item2 header__megamenu">Popular Now</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ไอเทมสดใสรับซัมเมอร์ เริ่มต้น ฿179</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Character shop license toolbox</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Spring celebrations</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Easy outfits for easy days!</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Sunsational swimwear</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Cartoons & Comics</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ไอเทมเบสิคมาใหม่</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Online Exclusive Items</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">H&M Take Care</a>
+                                        </div>
+                                    </li>
+
+                                    <!-- end Trending Now -->
+                                    <li class="megamenu__item3 header__megamenu">Deals & Offers</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าชิ้นสุดท้าย</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าราคาสุดคุ้มค่า เริ่มต้น ฿179</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item4 header__megamenu">ช้อปคอลเลคชั่น
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">S/S 2024</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Squishmallows x H&M</a>
+                                        </div>
+                                    </li>
+                                    <!-- end ช้อปคอลเลคชั่น -->
+                                </ul>
+                                <!-- เริ่มคอลัมที่2 ของเด็ก -->
+                                <ul class="content">
+                                    <li class="megamenu__item4 header__megamenu">ช้อปตามประเภทสินค้า</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อผ้า</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">รองเท้า กระเป๋า และเครื่องประดับ</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อตัวนอก</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เด็กผู้หญิง 2-10 ปี</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เด็กผู้ชาย 2-10 ปี</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เบสิค & สินค้าแพ็กหลายชิ้น</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดกีฬา</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">Care Products
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="nav__link5" class="listlevel1" onclick="goto(this)"><a href="#">Sport<svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-arrow-right-short  cursor-pointer" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                </svg></a>
+                            <div class="megamenulink5" id="megamenulinksport">
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor"
+                                        class="bi bi-arrow-left-short cursor-pointer" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+                                    </svg>Sport
+                                </span>
+                                <ul class="content">
+                                    <li class="megamenu__item1 header__megamenu">สินค้าใหม่</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ผู้หญิง</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ผู้ชาย</a>
+                                        </div>
+                                    </li>
+                                    <!-- end สินค้าใหม่ -->
+                                    <li class="megamenu__item2 header__megamenu">Deals & Offers</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าชิ้นสุดท้าย</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าราคาสุดคุ้มค่า เริ่มต้น ฿179</a>
+                                        </div>
+                                    </li>
+                                    <!-- end Trending Now -->
+                                    <li class="megamenu__item3 header__megamenu">Inspiration & Guides</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ไอเทมกีฬาเทนนิส - ผู้ชาย</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">สินค้าราคาสุดคุ้มค่า เริ่มต้น ฿179</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- เริ่มคอลัมที่2 ของsport -->
+                                <ul class="content">
+                                    <li class="megamenu__item4 header__megamenu">ผู้หญิง</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อผ้า</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">H&M พลัสไซซ์</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อตัวนอก</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ชุดคุณแม่</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ช้อปตามประเภทกิจกรรม</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- เริ่มคอลัมที่3 ของsport -->
+                                <ul class="content">
+                                    <li class="megamenu__item4 header__megamenu">ผู้ชาย</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ดูทั้งหมด</a>
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อผ้า</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">เสื้อตัวนอก</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">อุปกรณ์กีฬา</a>
+
+                                        </div>
+                                    </li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">ช้อปตามประเภทกิจกรรม</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- เริ่มคอลัมที่4 ของsport -->
+                                <ul class="content">
+                                    <li class="megamenu__item4 header__megamenu">Magazine</li>
+                                    <li class="megamenu__item">
+                                        <div class="megamenu__link">
+                                            <a href="#">RAYE & Zlatan invite the world to move</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="nav__link6" class="listlevel1"><a href="#">H&M HOME</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="block-search">
+                    <label class="">
+                        <span class="icon-search ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </span>
+                        <input class="box" placeholder="ค้นหาสินค้าจากทั้งร้านที่นี่..." type="text" name="search" />
+                    </label>
+                </div>
+            </div>
+        </header>
+        <main class="main-wrapper">
+            <div class="colums">
+                <div class="sidebar-categories">
+                    <ul class="top-categories">
+                        <li class="top-category"><span class="top-category-name has-children">สินค้าใหม่</span>
+                            <ul class="categories">
+                                <li class="category"><a class="category-link" href="#">ดูทั้งหมด</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">เสื้อผ้า</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">เสื้อยืด</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">ชุดว่ายน้ำ</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">รองเท้า
+                                        กระเป๋า และเครื่องประดับ</a> </li>
+                                <li class="category"><a class="category-link" href="#">ชุดชั้นใน
+                                        &amp; ชุดนอน</a> </li>
+                            </ul>
+                        </li>
+                        <li class="top-category"><span class="top-category-name has-children">Trending
+                                Now</span>
+                            <ul class="categories">
+                                <li class="category show"><a class="category-link" href="#">Style
+                                        Inspiration</a> </li>
+                                <li class="category selected show current"><a class="category-link" href="#">
+                                        ไอเทมรับซีซันใหม่</a> </li>
+                                <li class="category show"><a class="category-link" href="#">Online
+                                        Exclusive Items</a> </li>
+                            </ul>
+                        </li>
+                        <li class="top-category"><span class="top-category-name has-children">Deals &amp;
+                                Offers</span>
+                            <ul class="categories">
+                                <li class="category"><a class="category-link" href="#">ดีลสงกรานต์
+                                        เริ่มต้น ฿300</a> </li>
+                                <li class="category"><a class="category-link" href="#">
+                                        ไอเทมท่องเที่ยวราคาพิเศษ เริ่มต้น ฿200</a> </li>
+                                <li class="category"><a class="category-link" href="#">สินค้าชิ้นสุดท้าย</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">สินค้าราคาสุดคุ้มค่า
+                                        เริ่มต้น ฿179</a> </li>
+                            </ul>
+                        </li>
+                        <li class="top-category"><span class="top-category-name has-children">ช้อปตามประเภทสินค้า</span>
+                            <ul class="categories">
+                                <li class="category"><a class="category-link" href="">ดูทั้งหมด</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="">เดรส</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">เดรสยาว</a></li>
+                                        <li class="category"><a class="category-link" href="#">เดรสแขนพอง</a> </li>
+                                        <li class="category"><a class="category-link" href="#">เดรสสายเดี่ยว</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เดรสแขนยาว</a></li>
+                                        <li class="category"><a class="category-link" href="#">เดรสกระโปรงป้าย</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เชิ้ตเดรส</a></li>
+                                        <li class="category"><a class="category-link" href="#">เดรสชายหาด</a></li>
+                                        <li class="category"><a class="category-link" href="#">ปาร์ตี้เดรส</a></li>
+                                        <li class="category"><a class="category-link" href="#">เดรสรัดรูป</a></li>
+                                        <li class="category"><a class="category-link" href="#">เดรสสั้น</a> </li>
+                                        <li class="category"><a class="category-link" href="#">เดรสแขนกุด</a> </li>
+                                        <li class="category"><a class="category-link" href="#">เดรสคลุมเข่า</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">เสื้อ</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">เสื้อครอป</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อคอร์เซ็ท</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อคอเต่า</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อแต่งเว้า</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อคล้องคอ</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อคอปก</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อยืดพิมพ์ลาย</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อแขนกุด</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อแขนสั้น</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อคอกว้าง</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อแขนพอง</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อแขนยาว</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อเปิดไหล่</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">บอดี้สูท</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="category"><a class="category-link" href="#">เสื้อเชิ้ต &amp; เบลาส์</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">เบลาส์</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อเชิ้ต</a></li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อเชิ้ตผ้าลินิน</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">ชุดว่ายน้ำ</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">เสื้อบิกินี่</a></li>
+                                        <li class="category"><a class="category-link" href="#">กางเกงบิกินี่</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ชุดว่ายน้ำ</a></li>
+                                        <li class="category"><a class="category-link" href="#">ชุดชายหาด</a></li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">กางเกง</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">ทรงหลวม</a></li>
+                                        <li class="category"><a class="category-link" href="#">จ็อกเกอร์</a></li>
+                                        <li class="category"><a class="category-link" href="#">ผ้าลินิน</a></li>
+                                        <li class="category"><a class="category-link" href="#">ขากว้าง</a> </li>
+                                        <li class="category"><a class="category-link" href="#">คาร์โก</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ชิโน่
+                                                &amp; สแล็ค</a> </li>
+                                        <li class="category"><a class="category-link" href="#">เลกกิ้ง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ขาม้า</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ทางการ</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เอวสูง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">PU
+                                                Trousers</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">เบสิค</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">กางเกงขายาว
+                                                &amp; กางเกงเลกกิ้ง</a> </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อ</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เดรส
+                                                &amp; กระโปรง</a> </li>
+                                        <li class="category"><a class="category-link" href="#">คาร์ดิแกน
+                                                &amp; เสื้อกันหนาว</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">กางเกงขาสั้น</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">ยีนส์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เอวสูง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ไบค์เกอร์</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">กระโปรง</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">กระโปรงสั้น</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงคลุมเข่า</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงยีนส์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงเอวสูง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงพลีท</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงสั้นเหนือเข่า</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงบาน</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงทรงสอบ</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระโปรงยาว</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">รองเท้า</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">รองเท้าแตะลำลอง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">รองเท้าส้นสูง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">รองเท้าผ้าใบ</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">รองเท้าสลิปออน</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">รองเท้าโลฟเฟอร์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">รองเท้าเปิดส้น</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">รองเท้าส้นเตี้ย</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">เสื้อยืดแขนยาว
+                                        &amp; เสื้อฮู้ด</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">เสื้อฮู้ด</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อยืดแขนยาว</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="category"><a class="category-link" href="#">กางเกงยีนส์</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">สกินนี่</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ทรงหลวม</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">แบ็คกี้</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ขากว้าง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">บูทคัต</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เอวสูง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ทรงบอยเฟรนด์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กางเกงยีนส์แต่งขาด</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">สลิม</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ขาม้า</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ทรงกระชับหุ่น</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ขากระบอก</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">เสื้อไหมพรม</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">คาร์ดิแกน
+                                        &amp; เสื้อกันหนาว</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">เสื้อกันหนาว</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">คาร์ดิแกน</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อคอเต่า</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">เบลเซอร์
+                                        &amp; เสื้อกั๊ก</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">เบลเซอร์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อกั๊ก</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">โอเวอร์ไซส์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ทรงพอดีตัว</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เบลเซอร์กระดุมสองแถว</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">แจ็คเก็ต
+                                        &amp; เสื้อโค้ท</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">แจ็คเก็ต</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">แจ็คเก็ตหนัง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">แจ็คเก็ตยีนส์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">บอมเบอร์แจ็คเก็ต</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อโค้ท</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">จัมพ์สูท</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">จัมพ์สูทขาสั้น</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">จัมพ์สูทขายาว</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">ชุดกีฬา</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">สปอร์ตบรา</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อ</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เทรนนิ่ง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ชุดโยคะ</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กางเกง</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">ชุดชั้นใน</a>
+                                    <ul class="subcategories">
+                                        <li class="category"><a class="category-link" href="#">กางเกงชั้นใน</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">บรา</a>
+                                            <ul class="subcategories">
+                                                <li class="category"><a class="category-link" href="#">Non padded
+                                                        bra</a></li>
+                                                <li class="category"><a class="category-link" href="#">บราเลตต์</a>
+                                                </li>
+                                                <li class="category"><a class="category-link" href="#">Stick-on
+                                                        Bras</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">บอดี้สูท
+                                                &amp; คอร์เซ็ท</a> </li>
+                                        <li class="category"><a class="category-link"
+                                                href="#">ชุดชั้นในกระชับสัดส่วน</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">ชุดนอน -
+                                        สินค้าเฉพาะออนไลน์</a>
+                                    <ul class="subcategories">
+                                        <ul class="categories">
+                                            <li class="category"><a class="category-link" href="#">ชุดนอน</a>
+                                            </li>
+                                            <li class="category"><a class="category-link" href="#">เลาจ์แวร์</a>
+                                            </li>
+                                            <li class="category"><a class="category-link" href="#">ชุดคลุม</a>
+                                            </li>
+                                        </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">กระเป๋า</a>
+                                    <ul class="categories">
+                                        <li class="category"><a class="category-link" href="#">กระเป๋าช้อปปิ้ง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระเป๋าสะพายข้าง</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">กระเป๋าถือ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">แอ็กเซสซอรี่</a>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">H&amp;M
+                                        พลัสไซส์ - สินค้าเฉพาะออนไลน์</a>
+                                    <ul class="categories">
+                                        <li class="category"><a class="category-link" href="#">กางเกง
+                                                &amp; กระโปรง</a> </li>
+                                        <li class="category"><a class="category-link" href="#">กางเกงยีนส์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ชุดชั้นในสตรี
+                                                &amp; ถุงน่อง</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">ชุดคุณแม่
+                                        - สินค้าเฉพาะออนไลน์</a>
+                                    <ul class="categories">
+                                        <li class="category"><a class="category-link" href="#">เสื้อ</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">แจ็คเก็ต
+                                                &amp; เสื้อโค้ท</a> </li>
+                                        <li class="category"><a class="category-link" href="#">ชุดนอน
+                                                &amp; เลาจ์แวร์</a> </li>
+                                        <li class="category"><a class="category-link" href="#">เสื้อเชิ้ต
+                                                &amp; เบลาส์</a> </li>
+                                        <li class="category"><a class="category-link" href="#">กางเกง
+                                                &amp; กระโปรง</a> </li>
+                                        <li class="category"><a class="category-link" href="#">กางเกงยีนส์</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">เดรส</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">ชุดชั้นใน
+                                                &amp; ถุงน่อง</a> </li>
+                                        <li class="category"><a class="category-link" href="#">ชุดให้นมบุตร</a>
+                                        </li>
+                                        <li class="category"><a class="category-link" href="#">Occasion
+                                                wear</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">สินค้าพรีเมี่ยม
+                                        - สินค้าเฉพาะออนไลน์</a>
+                                    <ul class="categories">
+                                        <li class="category"><a class="category-link" href="#">Jackets
+                                                &amp; Coats</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">ถุงเท้า
+                                        &amp; ถุงน่อง</a>
+                                    <ul class="categories">
+                                        <li class="category"><a class="category-link" href="#">ถุงน่อง
+                                                &amp; เลกกิ้ง</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="category"><a class="category-link" href="#">Care
+                                        Products</a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li class="top-category"><span class="top-category-name has-children">ช้อปคอลเลคชั่น</span>
+                        <ul class="categories">
+                            <li class="category"><a class="category-link" href="#">rokh H&amp;M</a> </li>
+                            <li class="category"><a class="category-link" href="#">S/S 2024</a> </li>
+                            <li class="category"><a class="category-link" href="#">Limited Edition
+                                    2024&ZeroWidthSpace;</a> </li>
+                            <li class="category"><a class="category-link" href="#">STUDIO S/S 2024</a> </li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="column-main">
+                    <h1> ไอเทมรับซีซันใหม่</h1>
+                    <div ></div>
+                    <div class="prod-con">
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/0ceeacc4e188954375639ad0729e1e6b373ac828_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/3136251f523ae1ad5551f97edc059735763ce2b0_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/2b4889ef450d013c0379a8835f09ae7fcc6b8b0b_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/c904691ff3d129a90552c1d9a6b5ccaadbf37bf9_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/243cd58e997ce43c620f59e95e3621a6e28f967b_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/d25f6438b4b165378771286127afbf9ddcb6de11_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/fb9e7643fe90fbcb0c42381643a04cf2855bb2e6_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/114ee0358096ce02c090e9d3eed7db9145a4b8a6_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/d9dd0731ec6d614f2e8c631055ce29cfa699a9a5_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/1b4273156bdfced41d26cee5c7a31c6f7e9686be_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/9fe8060ecdb59a98708abdb0b7409ebb73373193_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        <div class="prod-item">
+                            <div class="prod-img">
+                                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/medium/5eb5781704593d1a89afa329d1a7671812ba3176_xxl-1.jpg"
+                                    alt="">
+                                <div class="heart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"
+                                        stroke-width="0.5" stroke="currentColor" class="">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="prod-detail">
+                                <div class="prod-name"><a href="#">Knitted dress</a></div>
+                                <div class="prod-price"><a href="#">฿ 1,099</a></div>
+                                <div class="prod-new"><a href="#">สินค้ามาใหม่</a></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

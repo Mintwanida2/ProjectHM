@@ -1,0 +1,76 @@
+.main-wrapper{
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
+    z-index: 10;
+}
+.colums{
+    width: 100%;
+    height: 100%;
+    display: flex;
+   flex-wrap: nowrap;
+}
+
+.subcategories {
+    display: none;
+}
+.top-categories,.category{
+    list-style: none;
+    text-decoration: none;
+}
+.top-category{
+    margin-bottom: 50px;
+    white-space: nowrap;
+}
+.top-category-name  {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+.category-link{
+    text-decoration: none;
+}
+.categories{
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+}
+.prod-img{
+    position: relative;
+}
+.heart{
+    display: block;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    right: 30px;
+    bottom: 20px;
+    fill: aliceblue;
+}
+
+.column-main{
+    margin-left: 50px;
+}
+.prod-detail a{
+    text-decoration: none;
+}
+/* ให้ณุปเต็มพื้นที่ prod-con */
+.prod-img img{
+    width: 100%;
+}
+.prod-con{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    row-gap: 48px;
+    column-gap: 8px;
+    overflow: hidden;
+}
+.column-main h1{
+    font-weight: 500;
+}
+
+/* เมื่อหน้าจอมีขนาดน้อยกว่าหรือเท่ากับ 1024px */
+@media (max-width: 1024px) {
+    .prod-con{ 
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
+    }
+}
